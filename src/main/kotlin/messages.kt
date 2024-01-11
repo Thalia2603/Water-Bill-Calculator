@@ -22,7 +22,10 @@ fun startOfProgramMessage() {
  * @since 04/01/2024
  */
 fun endOfProgramMessage(){
-    println(BLUE_BOLD_BRIGHT+"         ¡HASTA PRONTO!        "+RESET)
+
+    println(BLUE_BOLD_BRIGHT + "----------------------------")
+    println("        ¡HASTA PRONTO!      ")
+    println("----------------------------" + RESET)
 }
 
 /**
@@ -34,6 +37,7 @@ fun messageErrorDT(){
     //funcion que es llamada cuando el tipo de dato es incorrecto
     println(RED_BOLD+"El tipo de dato no es correcto, vuelva a intentarlo"+RESET)
 }
+
 /**
  *This function prints range error message (used in functions that check input) in yellow
  * @author Thalia2603

@@ -37,12 +37,7 @@ fun calculateConsumption(liters: Float, discount: Boolean, socialBonus: Boolean)
 
     // Aplica descuento por bono social
     if (socialBonus && discount) {
-        val numberOfPeople = numberOfPeople()
-        if (numberOfPeople > 5) {
-            println(PURPLE_BOLD_BRIGHT+"Se le aplicará un 50% de descuento"+ RESET)
-        } else if (numberOfPeople < 5) {
-            println(PURPLE_BOLD_BRIGHT+"Se le aplicará un ${numberOfPeople*10}% de descuento"+ RESET)
-        }
+        println(PURPLE_BOLD_BRIGHT+"Se le aplicará un 80% de descuento y su quota fija reducirá a 3€"+ RESET)
         calculationWithDiscount = calculateSocialBonus(initialCalculationWithoutDiscounts)
     }
 
