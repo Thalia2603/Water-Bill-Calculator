@@ -3,7 +3,7 @@
 ![Watter bill](https://github.com/Thalia2603/waterBill/assets/153110473/97649a91-92e8-4478-af11-9a4aebfac62a)
 
 
-Este programa, desarrollado por Thalia Bravo, está diseñado para calcular el costo de las facturas de agua, teniendo en cuenta diversos factores como la cantidad de litros consumidos, la presencia de descuentos por familia numerosa o monoparental, y la aplicación de bonos sociales.
+Este programa, desarrollado en Kotlin, está diseñado para calcular el costo de las facturas de agua, teniendo en cuenta diversos factores como la cantidad de litros consumidos, la presencia de descuentos por familia numerosa o monoparental, y la aplicación de bonos sociales.
 
 ## Índice
 
