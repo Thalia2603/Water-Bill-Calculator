@@ -8,15 +8,23 @@ package org.example
  * @author Thalia Bravo
  */
 fun main() {
+    // Muestra el mensaje de inicio del programa
     startOfProgramMessage()
+    // Realiza el bucle do-while para permitir cálculos más de un cálculo hasta que el usuario decida parar
     do {
-        val consumedLiters = readFloat("1. Enter the consumed liters of water:")
-        val hasFamilyDiscount = readStringSiNo("2. Do you have a large family or single-parent card? (yes/no)")
-        val hasSocialBonus = readStringSiNo("3. Do you have any social bonus? (yes/no)")
+        // Solicita al usuario la cantidad de litros de agua consumidos
+        val consumedLiters = readFloat("1. Introduza los litros consumidos este mes:")
+        // Pregunta al usuario si tiene descuento por ser familia numerosa o monoparental
+        val hasFamilyDiscount = readStringSiNo("2. Dispone de carnet monoparental o de familia numerosa?: (si/no)")
+        // Pregunta al usuario si dispone de un bono social
+        val hasSocialBonus = readStringSiNo("3. Dispone de bono social?: (si/no)")
+        // Calcula el costo final de consumo y muestra el resultado
         val consumptionPrice = calculateConsumption(consumedLiters, hasFamilyDiscount, hasSocialBonus)
-        println(GREEN_BOLD_BRIGHT + "-----FINAL PRICE: ${consumptionPrice.round(2)} €-----" + RESET)
-        val wantsToContinue = readStringSiNo(YELLOW_BOLD_BRIGHT + "Do you want to calculate another water bill? (yes/no)" + RESET)
+        println(GREEN_BOLD_BRIGHT + "-----PRECIO FINAL: ${consumptionPrice.round(2)} €-----" + RESET)
+        // Pregunta al usuario si desea seguir calculando
+        val wantsToContinue = readStringSiNo(YELLOW_BOLD_BRIGHT + "Desea seguir con alguna otra factura?: (si/no)" + RESET)
     } while (wantsToContinue)
+    // Muestra el mensaje final del programa
     endOfProgramMessage()
 }
 
