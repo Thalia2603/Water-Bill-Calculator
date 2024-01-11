@@ -11,39 +11,44 @@ package org.example
  * @author Thalia Bravo
  * @since 10/01/2024
  */
-fun calculoConsumo(litros:Float, descuento:Boolean,bono:Boolean):Double{
-    val primerCalculoSinDescuentos=calculoPrincipal(litros)
-    var calculoConDescuento=primerCalculoSinDescuentos
-    if (descuento && !bono){
-        val nPersonas=numeroPersonas()
-        if (nPersonas>5){
+fun calculateConsumption(liters: Float, discount: Boolean, socialBonus: Boolean): Double {
+    val initialCalculationWithoutDiscounts = baseCalculation(liters)
+    var calculationWithDiscount = initialCalculationWithoutDiscounts
+    if (discount && !socialBonus) {
+        val numberOfPeople = numberOfPeople()
+        if (numberOfPeople > 5) {
             println(PURPLE_BOLD_BRIGHT+"Se le aplicará un 50% de descuento por ser familia numerosa"+ RESET)
-        }else if (nPersonas<5){
-            println(PURPLE_BOLD_BRIGHT+"Se le aplicará un ${nPersonas*10}% de descuento por ser familia numerosa"+ RESET)
-        }else if (nPersonas==1){
-            println(PURPLE_BOLD_BRIGHT+"Se le aplicará un ${nPersonas*10}% de descuento por ser familia monoparental"+ RESET)
+        } else if (numberOfPeople < 5) {
+            println(PURPLE_BOLD_BRIGHT+"Se le aplicará un ${numberOfPeople*10}% de descuento por ser familia numerosa"+ RESET)
+        } else if (numberOfPeople == 1) {
+            println(PURPLE_BOLD_BRIGHT+"Se le aplicará un ${numberOfPeople*10}% de descuento por ser familia monoparental"+ RESET)
         }
-        calculoConDescuento=calculoFamiliaMoN(nPersonas,primerCalculoSinDescuentos)
+        calculationWithDiscount = calculateFamilyMoN(numberOfPeople, initialCalculationWithoutDiscounts)
     }
-    if (bono && !descuento){
+
+    if (socialBonus && !discount) {
         println(PURPLE_BOLD_BRIGHT+"Se le aplicará un 80% de descuento y su quota fija reducirá a 3€"+ RESET)
-        calculoConDescuento=calculoBonoSocial(primerCalculoSinDescuentos)
+        calculationWithDiscount = calculateSocialBonus(initialCalculationWithoutDiscounts)
     }
 
-    if (bono && descuento){
-        val nPersonas=numeroPersonas()
-        if (nPersonas>5){
+
+    if (socialBonus && discount) {
+        val numberOfPeople = numberOfPeople()
+        if (numberOfPeople > 5) {
             println(PURPLE_BOLD_BRIGHT+"Se le aplicará un 50% de descuento"+ RESET)
-        }else if (nPersonas<5){
-            println(PURPLE_BOLD_BRIGHT+"Se le aplicará un ${nPersonas*10}% de descuento"+ RESET)
+        } else if (numberOfPeople < 5) {
+            println(PURPLE_BOLD_BRIGHT+"Se le aplicará un ${numberOfPeople*10}% de descuento"+ RESET)
         }
-        calculoConDescuento=calculoBonoSocial(primerCalculoSinDescuentos)
+        calculationWithDiscount = calculateSocialBonus(initialCalculationWithoutDiscounts)
     }
 
-    if (!bono && !descuento){
-        println(PURPLE_BOLD_BRIGHT+"Lamentablemente no tiene ningún descuento"+ RESET)
+
+
+    if (!socialBonus && !discount) {
+        println(PURPLE_BOLD_BRIGHT + "Desafortunadamente, no dispone de ningún descuento" + RESET)
     }
-    return calculoConDescuento
+
+    return calculationWithDiscount
 }
 
 /**
@@ -54,9 +59,9 @@ fun calculoConsumo(litros:Float, descuento:Boolean,bono:Boolean):Double{
  * @since 10/01/2024
  * @author Thalia Bravo
  */
-fun numeroPersonas():Int{
-    val nPersonas= readInt("Introduzca el numero de miembros en su familia")
-    return nPersonas
+fun numberOfPeople(): Int {
+    val numberOfPeople = readInt("Introduce el número de miembros en tu familia")
+    return numberOfPeople
 }
 /**
  * Calcula el costo final aplicando el bono social.
@@ -67,10 +72,11 @@ fun numeroPersonas():Int{
  * @since 10/01/2024
  * @author Thalia Bravo
  */
-fun calculoBonoSocial(precio:Double):Double{
-    val precioFinal=((80*precio)/100)-3
-    return precioFinal
+fun calculateSocialBonus(price: Double): Double {
+    val finalPrice = ((80 * price) / 100) - 3
+    return finalPrice
 }
+
 
 /**
  * Calcula el costo inicial del consumo de agua sin descuentos.
@@ -81,18 +87,21 @@ fun calculoBonoSocial(precio:Double):Double{
  * @since 10/01/2024
  * @author Thalia Bravo
  */
-fun calculoPrincipal(litros: Float):Double{
-    val quotafija=6.0
-    var litrosFinales=0.0
-    if (litros<50){
-        litrosFinales=litros.toDouble()
-    }else if (litros in 50.0..200.0){
-        litrosFinales= (litros*0.15)+quotafija
-    }else if (litros>200){
-        litrosFinales=(litros*0.30)+quotafija
+fun baseCalculation(liters: Float): Double {
+    val fixedQuota = 6.0
+    var finalLiters = 0.0
+
+    if (liters < 50) {
+        finalLiters = liters.toDouble()
+    } else if (liters in 50.0..200.0) {
+        finalLiters = (liters * 0.15) + fixedQuota
+    } else if (liters > 200) {
+        finalLiters = (liters * 0.30) + fixedQuota
     }
-    return litrosFinales
+
+    return finalLiters
 }
+
 
 /**
  * Calcula el costo con descuento para familia numerosa o monoparental.
@@ -104,16 +113,18 @@ fun calculoPrincipal(litros: Float):Double{
  * @since 10/01/2024
  * @author Thalia Bravo
  */
-fun calculoFamiliaMoN(personas: Int, precio: Double): Double {
-    var porcentaje = personas * 10
-    val precioFamiliaNumerosa:Double
-    if (porcentaje < 50) {
-        precioFamiliaNumerosa=(porcentaje * precio) / 100
-        return precioFamiliaNumerosa
+fun calculateFamilyMoN(people: Int, price: Double): Double {
+    var percentage = people * 10
+    val familyDiscountPrice: Double
+
+    if (percentage < 50) {
+        familyDiscountPrice = (percentage * price) / 100
+        return familyDiscountPrice
     } else {
-        porcentaje = 50
+        percentage = 50
     }
-    precioFamiliaNumerosa=(porcentaje * precio) / 100
-    return precioFamiliaNumerosa
+
+    familyDiscountPrice = (percentage * price) / 100
+    return familyDiscountPrice
 }
 

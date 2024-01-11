@@ -10,13 +10,13 @@ package org.example
 fun main() {
     startOfProgramMessage()
     do {
-        val litrosConsumidos= readFloat("1.Introduce los litros de agua consumidos:")
-        val tieneDescuento= readStringSiNo("2.Dispone de carnet de familia numerosa o monoparental? (si/no)")
-        val tieneBonoSocial= readStringSiNo("3.Dispone algún bono social?(si/no)")
-        val precioConsumo= calculoConsumo(litrosConsumidos,tieneDescuento,tieneBonoSocial)
-        println(GREEN_BOLD_BRIGHT+"-----PRECIO FINAL: ${precioConsumo.round(2)} €-----"+ RESET)
-        val quiereSeguir= readStringSiNo(YELLOW_BOLD_BRIGHT+"Desea calcular otra factura? (si/no)"+ RESET)
-    }while (quiereSeguir)
+        val consumedLiters = readFloat("1. Enter the consumed liters of water:")
+        val hasFamilyDiscount = readStringSiNo("2. Do you have a large family or single-parent card? (yes/no)")
+        val hasSocialBonus = readStringSiNo("3. Do you have any social bonus? (yes/no)")
+        val consumptionPrice = calculateConsumption(consumedLiters, hasFamilyDiscount, hasSocialBonus)
+        println(GREEN_BOLD_BRIGHT + "-----FINAL PRICE: ${consumptionPrice.round(2)} €-----" + RESET)
+        val wantsToContinue = readStringSiNo(YELLOW_BOLD_BRIGHT + "Do you want to calculate another water bill? (yes/no)" + RESET)
+    } while (wantsToContinue)
     endOfProgramMessage()
 }
 
