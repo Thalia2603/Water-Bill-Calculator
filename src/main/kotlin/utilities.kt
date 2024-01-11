@@ -249,6 +249,34 @@ fun readFloat(pMessageIn: String
 }
 
 /**
+ * This method can be used to read a Double value from the user through keyboard using java.util.Scanner
+ * @author Thalia Bravo
+ * @since 15/12/2023
+ * @param pMessageIn Input message to be shown to the user
+ * @return outputValue Output value
+ */
+fun readDouble(pMessageIn: String
+): Double{
+
+    var outputValue: Double = 0.0
+    var correctDataType: Boolean = false
+
+    do{
+        println(pMessageIn)
+        correctDataType = scan.hasNextDouble()
+
+        if (!correctDataType){
+            messageErrorDT()
+        }else{
+            outputValue = scan.nextDouble()
+        }
+        scan.nextLine()
+    }while(!correctDataType)
+
+    return outputValue
+}
+
+/**
  * This method can be used to round a Double "x" decimals and returns Float
  * @author anna.cano0
  * @since 23/12/2023

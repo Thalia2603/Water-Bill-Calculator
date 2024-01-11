@@ -13,7 +13,7 @@ fun main() {
     // Realiza el bucle do-while para permitir cálculos más de un cálculo hasta que el usuario decida parar
     do {
         // Solicita al usuario la cantidad de litros de agua consumidos
-        val consumedLiters = readFloat("1. Introduza los litros consumidos este mes:")
+        val consumedLiters = readDouble("1. Introduza los litros consumidos este mes:")
         // Pregunta al usuario si tiene descuento por ser familia numerosa o monoparental
         val hasFamilyDiscount = readStringSiNo("2. Dispone de carnet monoparental o de familia numerosa?: (si/no)")
         // Pregunta al usuario si dispone de un bono social

@@ -13,7 +13,7 @@ package org.example
  * @since 10/01/2024
  * @author Thalia Bravo
  */
-fun calculateConsumption(liters: Float, discount: Boolean, socialBonus: Boolean): Double {
+fun calculateConsumption(liters: Double, discount: Boolean, socialBonus: Boolean): Double {
     val initialCalculationWithoutDiscounts = baseCalculation(liters)
     var calculationWithDiscount = initialCalculationWithoutDiscounts
     // Aplica descuento por familia numerosa o monoparental
@@ -85,7 +85,7 @@ fun calculateSocialBonus(price: Double): Double {
  * @since 10/01/2024
  * @author Thalia Bravo
  */
-fun baseCalculation(liters: Float): Double {
+fun baseCalculation(liters: Double): Double {
     val fixedQuota = 6.0
     var finalLiters = 0.0
 
