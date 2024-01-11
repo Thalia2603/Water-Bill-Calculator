@@ -93,7 +93,7 @@ fun baseCalculation(liters: Double): Double {
 
     // Determina el precio inicial sin descuentos según la cantidad de litros consumidos
     if (liters < 50) {
-        finalLiters = liters.toDouble()
+        finalLiters = liters
     } else if (liters in 50.0..200.0) {
         finalLiters = (liters * 0.15) + fixedQuota
     } else if (liters > 200) {
@@ -116,7 +116,7 @@ fun baseCalculation(liters: Double): Double {
  */
 fun calculateFamilyMoN(people: Int, price: Double): Double {
     var percentage = people * 10
-    var percentageFinal=0.0
+    val percentageFinal:Double
     val familyDiscountPrice: Double
 
     // Calcula el precio final con descuento según el porcentaje de descuento por familia numerosa o monoparental
