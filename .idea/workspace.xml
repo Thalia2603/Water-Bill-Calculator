@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf5eea59-9a8a-401e-ae7d-a23be2f234a1" name="Changes" comment="added some commentaries on Main.kt">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/FunctionsKtTest.kt" afterDir="false" />
+    <list default="true" id="cf5eea59-9a8a-401e-ae7d-a23be2f234a1" name="Changes" comment="added FunctionsKtTest.kt and solved all the unit tests">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/functions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utilities.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utilities.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +46,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2aouIJzChPNG5cbmlAgmxVaCFNy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -60,44 +57,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build waterBill.executor": "Run",
-    "Gradle.FunctionsKtTest.checkResultCalculateSocialBonus.executor": "Run",
-    "Gradle.FunctionsKtTest.testCalculoPrincipal.executor": "Run",
-    "Gradle.WaterBillTest.checkResultBaseCalculation.executor": "Run",
-    "Gradle.WaterBillTest.checkResultCalculateFamilyMoNGreaterThan50.executor": "Run",
-    "Gradle.WaterBillTest.checkResultCalculateFamilyMoNLessThan50.executor": "Debug",
-    "Gradle.WaterBillTest.checkResultCalculateSocialBonus.executor": "Run",
-    "Gradle.WaterBillTest.executor": "Run",
-    "Gradle.WaterBillTest.testBaseCalculation_Between50And200Liters.executor": "Run",
-    "Gradle.WaterBillTest.testBaseCalculation_LessThan50Liters.executor": "Run",
-    "Gradle.WaterBillTest.testCalculateConsumption_FamilyDiscount.executor": "Run",
-    "Gradle.WaterBillTest.testCalculateConsumption_NoDiscountNoSocialBonus.executor": "Run",
-    "Gradle.WaterBillTest.testCalculateFamilyMoN_FewPeople.executor": "Run",
-    "Gradle.WaterBillTest.testCalculateFamilyMoN_GreaterThan50Percent.executor": "Run",
-    "Gradle.WaterBillTest.testCalculateFamilyMoN_ManyPeople.executor": "Run",
-    "Gradle.WaterBillTest.testCalculateSocialBonus.executor": "Run",
-    "Gradle.WaterBillTest.testCalculateSocialBonus_WithDiscount.executor": "Run",
-    "Gradle.WaterBillTest.testNumberOfPeople.executor": "Run",
-    "Kotlin.MainKt.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build waterBill.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FunctionsKtTest.checkResultCalculateSocialBonus.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FunctionsKtTest.testCalculoPrincipal.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.checkResultBaseCalculation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.checkResultCalculateFamilyMoNGreaterThan50.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.checkResultCalculateFamilyMoNLessThan50.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.WaterBillTest.checkResultCalculateSocialBonus.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testBaseCalculation_Between50And200Liters.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testBaseCalculation_LessThan50Liters.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testCalculateConsumption_FamilyDiscount.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testCalculateConsumption_NoDiscountNoSocialBonus.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testCalculateFamilyMoN_FewPeople.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testCalculateFamilyMoN_GreaterThan50Percent.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testCalculateFamilyMoN_ManyPeople.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testCalculateSocialBonus.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testCalculateSocialBonus_WithDiscount.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WaterBillTest.testNumberOfPeople.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -106,7 +103,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WaterBillTest">
+  <component name="RunManager">
     <configuration name="WaterBillTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -293,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705007030103</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added FunctionsKtTest.kt and solved all the unit tests">
+      <option name="closed" value="true" />
+      <created>1705011637650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705011637650</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,6 +317,7 @@
     <MESSAGE value="change language to English" />
     <MESSAGE value="added some commentaries" />
     <MESSAGE value="added some commentaries on Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some commentaries on Main.kt" />
+    <MESSAGE value="added FunctionsKtTest.kt and solved all the unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added FunctionsKtTest.kt and solved all the unit tests" />
   </component>
 </project>

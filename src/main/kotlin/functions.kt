@@ -71,7 +71,9 @@ fun numberOfPeople(): Int {
  * @author Thalia Bravo
  */
 fun calculateSocialBonus(price: Double): Double {
-    val finalPrice = ((80 * price) / 100) - 3
+    val percentage= ((80 * price) / 100) - 3
+    val finalPrice =price-percentage
+
     return finalPrice
 }
 
@@ -114,17 +116,19 @@ fun baseCalculation(liters: Double): Double {
  */
 fun calculateFamilyMoN(people: Int, price: Double): Double {
     var percentage = people * 10
+    var percentageFinal=0.0
     val familyDiscountPrice: Double
 
     // Calcula el precio final con descuento según el porcentaje de descuento por familia numerosa o monoparental
     if (percentage < 50) {
-        familyDiscountPrice = (percentage * price) / 100
+        percentageFinal=(percentage * price) / 100
+        familyDiscountPrice = price-percentageFinal
         return familyDiscountPrice
     } else {
         percentage = 50
     }
-
-    familyDiscountPrice = (percentage * price) / 100
+    percentageFinal= (percentage * price) / 100
+    familyDiscountPrice =price-percentageFinal
     return familyDiscountPrice
 }
 
