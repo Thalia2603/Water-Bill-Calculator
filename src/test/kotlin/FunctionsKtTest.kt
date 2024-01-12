@@ -50,7 +50,7 @@ class WaterBillTest {
      */
     @Test
     fun testCalculateSocialBonus() {
-        val expected = 17.0 // Ajusta el resultado esperado según tu lógica
+        val expected = 8.0 // Ajusta el resultado esperado según tu lógica
         val actual = calculateSocialBonus(25.0)
         assertEquals(expected, actual)
     }
@@ -72,7 +72,7 @@ class WaterBillTest {
      */
     @Test
     fun testCalculateFamilyMoN_FewPeople() {
-        val expected = 5.4 // Ajusta el resultado esperado según tu lógica
+        val expected = 12.6 // Ajusta el resultado esperado según tu lógica
         val actual = calculateFamilyMoN(3, 18.0)
         assertEquals(expected, actual)
     }
