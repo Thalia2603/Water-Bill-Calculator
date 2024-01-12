@@ -23,7 +23,7 @@ Este programa, desarrollado en Kotlin, está diseñado para calcular el costo de
 
 Este programa proporciona una herramienta para calcular el costo de las facturas de agua. Su flexibilidad permite considerar diferentes situaciones, como la cantidad de litros consumidos, descuentos por familia numerosa o monoparental, y la aplicación de bonos sociales. La interacción es en español y la modularidad del código facilita su comprensión y mantenimiento.
 
-### Función Principal (`main`)ç
+### Función Principal (`main`)
 
 ![main](https://github.com/Thalia2603/waterBill/assets/153110473/7cf1b92c-743e-4ae6-8698-fb2977982e04)
 
